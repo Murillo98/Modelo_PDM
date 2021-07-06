@@ -43,16 +43,16 @@ http://www.templatemo.com/tm-488-classic
                         <div class="collapse navbar-toggleable-sm" id="tmNavbar">
                             <ul class="nav navbar-nav">
                                 <li class="nav-item">
-                                    <a href="../index.html" class="nav-link">Home</a>
+                                    <a href="../index.html" class="nav-link">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href=."../about.html" class="nav-link">About</a>
+                                    <a href=."../about.html" class="nav-link">El proyecto</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../blog.html" class="nav-link">Blog</a>
+                                    <a href="../blog.html" class="nav-link">El equipo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../contact.html" class="nav-link">Contact</a>
+                                    <a href="../contact.html" class="nav-link">Ingresar sesion</a>
                                 </li>
                             </ul>                        
                         </div>
@@ -70,25 +70,8 @@ http://www.templatemo.com/tm-488-classic
         <section class="tm-section">
             <div class="container-fluid">
                 <div class="row tm-2-rows-sm-swap">
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 tm-2-rows-sm-down-2">
-                        
-                        <h3 class="tm-gold-text">Sidebar Links</h3>
-                        
-                        <nav>
-                            <ul class="nav">
-                                <li><a href="#" class="tm-text-link">Lorem ipsum dolor sit</a></li>
-                                <li><a href="#" class="tm-text-link">Tincidunt non faucibus placerat</a></li>
-                                <li><a href="#" class="tm-text-link">Vestibulum tempor ac lectus</a></li>
-                                <li><a href="#" class="tm-text-link">Fusce non turpis euismod</a></li>
-                                <li><a href="#" class="tm-text-link">Nam in augue consectetur</a></li>
-                                <li><a href="#" class="tm-text-link">Text Link Color #006699</a></li>
-                            </ul>
-                        </nav>   
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 tm-2-rows-sm-down-1"><!-- TemplateBeginEditable name="Contenido" -->
-                      <h3 class="tm-gold-text">Pellentesque fermentum mauris</h3>
+                  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 tm-2-rows-sm-down-1"><!-- TemplateBeginEditable name="Contenido" -->
+                  <h3 class="tm-gold-text">Pellentesque fermentum mauris</h3>
                       <p>Vivamus accumsan blandit ligula. Sed lobortis efficitur sapien</p>
                       <p>Quisque vel sem eu turpis ullamcorper euismod. Praesent quis nisi ac augue luctus viverra. Sed et dui nisi. Fusce vitae dapibus justo. Pellentesque accumsan est ac posuere imperdiet. Curabitur eros mi, lacinia at euismod quis, dapibus vel ligula. Ut sodales erat vitae nunc tempor mollis. Donec tempor lobortis tortor, in feugiat massa facilisis sed. Ut dignissim viverra pretium. In eu justo maximus turpis feugiat finibus scelerisque nec eros.</p>
                       <p> Classic Template provides a great flexibility to arrange the content in any way you like. Please tell your friends about templatemo. Nam sem neque, finibus id sem pharetra, cursus porttitor ligula. Praesent aliquam fermentum dui, vitae venenatis libero vulputate ac. Fusce bibendum scelerisque magna eget iaculis.</p>
