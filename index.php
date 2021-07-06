@@ -31,7 +31,7 @@ http://www.templatemo.com/tm-488-classic
         <div class="tm-header">
             <div class="container-fluid">
                 <div class="tm-header-inner">
-                    <a href="#" class="navbar-brand tm-site-name">Classic</a>
+                    <a href="#" class="navbar-brand tm-site-name">GRUPO 1</a>
                     
                     <!-- navbar -->
                     <nav class="navbar tm-main-nav">
@@ -45,8 +45,8 @@ http://www.templatemo.com/tm-488-classic
                                 <li class="nav-item">
                                     <a href="index.html" class="nav-link">Home</a>
                                 </li>
-                                <li class="nav-item active">
-                                    <a href="about.html" class="nav-link">About</a>
+                                <li class="nav-item">
+                                    <a href=."about.html" class="nav-link">About</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="blog.html" class="nav-link">Blog</a>
