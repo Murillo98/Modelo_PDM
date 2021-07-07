@@ -43,7 +43,7 @@ http://www.templatemo.com/tm-488-classic
                         <div class="collapse navbar-toggleable-sm" id="tmNavbar">
                             <ul class="nav navbar-nav">
                                 <li class="nav-item">
-                                    <a href="index.html" class="nav-link">Inicio</a>
+                                    <a href="index.php" class="nav-link">Inicio</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href=el proyecto.php class="nav-link">El proyecto</a>
@@ -71,10 +71,11 @@ http://www.templatemo.com/tm-488-classic
             <div class="container-fluid">
                 <div class="row tm-2-rows-sm-swap">
                   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 tm-2-rows-sm-down-1"><!-- InstanceBeginEditable name="Contenido" -->
-                  <h3 class="tm-gold-text">Pellentesque fermentum mauris</h3>
-                      <p>Vivamus accumsan blandit ligula. Sed lobortis efficitur sapien</p>
-                      <p>Quisque vel sem eu turpis ullamcorper euismod. Praesent quis nisi ac augue luctus viverra. Sed et dui nisi. Fusce vitae dapibus justo. Pellentesque accumsan est ac posuere imperdiet. Curabitur eros mi, lacinia at euismod quis, dapibus vel ligula. Ut sodales erat vitae nunc tempor mollis. Donec tempor lobortis tortor, in feugiat massa facilisis sed. Ut dignissim viverra pretium. In eu justo maximus turpis feugiat finibus scelerisque nec eros.</p>
-                      <p> Classic Template provides a great flexibility to arrange the content in any way you like. Please tell your friends about templatemo. Nam sem neque, finibus id sem pharetra, cursus porttitor ligula. Praesent aliquam fermentum dui, vitae venenatis libero vulputate ac. Fusce bibendum scelerisque magna eget iaculis.</p>
+                  <h3 class="tm-gold-text">Motivación para el desarrollo del proyecto</h3>
+                      <p>A raíz del creciente número de casos de Covid - 19 en el Perú, las zonas UCI en los hospitales colapsaron. El cual genero demanda de balones de oxígenos.</p>
+                      <p>Una solución tecnológica fue los concentradores de oxígenos que evita la recarga de balones de oxígeno.</p>
+                  <p>Así, nos motivo la idea del desarrollo del concentrador de oxígeno conectado a una máscara snorkel para aumentar la eficacia de la entrega de oxígeno al paciente.</p>
+                      <p>&nbsp;</p>
                     <!-- InstanceEndEditable --></div>
                 </div>
                 

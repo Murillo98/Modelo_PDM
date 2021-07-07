@@ -43,7 +43,7 @@ http://www.templatemo.com/tm-488-classic
                         <div class="collapse navbar-toggleable-sm" id="tmNavbar">
                             <ul class="nav navbar-nav">
                                 <li class="nav-item">
-                                    <a href="index.html" class="nav-link">Inicio</a>
+                                    <a href="index.php" class="nav-link">Inicio</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href=el proyecto.php class="nav-link">El proyecto</a>
