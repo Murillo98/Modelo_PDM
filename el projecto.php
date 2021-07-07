@@ -71,14 +71,15 @@ http://www.templatemo.com/tm-488-classic
             <div class="container-fluid">
                 <div class="row tm-2-rows-sm-swap">
                   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 tm-2-rows-sm-down-1"><!-- InstanceBeginEditable name="Contenido" -->
-                  <h3 class="tm-gold-text">El equipo</h3>
-                      <p>Arturo Asto</p>
-                      <p>Anghy Toledo</p>
-                      <p> Wilder Prado</p>
-                      <p>Anggelo Murillo</p>
-                      <p>&nbsp;</p>
-                      <p>&nbsp;</p>
-                      <p>&nbsp;</p>
+                  <h3 class="tm-gold-text">Concentrador de oxígeno</h3>
+                  <p>El concentrador de oxígeno entrega un flujo entre 0 - 30 l/min</p>
+                  <p><span class="tm-gold-text">Máscara Snorkel</span></p>
+                  <p>La máscara snorkel ayudará a una mejor entrega del oxígeno al paciente y se puede guardar en la estructura del concentrador.</p>
+                  <h3 class="tm-gold-text">Sensores</h3>
+                  <p>Contamos con un sensor de temperatura en la máscara snorkel para una toma de medida en la cabeza.</p>
+                  <p>Además, un oximetro en el dedo, el cual podrá enviar los datos al controlador del concentrador para regular el flujo de forma automática.</p>
+                  <h3 class="tm-gold-text">Base de datos</h3>
+                  <p>Contamos con una base de datos en la cual el médico a través de una página web puede acceder a los signos vitales para su seguimiento.</p>
                     <!-- InstanceEndEditable --></div>
                 </div>
                 

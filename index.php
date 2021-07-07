@@ -46,7 +46,7 @@ http://www.templatemo.com/tm-488-classic
                                     <a href="index.php" class="nav-link">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href=el proyecto.php class="nav-link">El proyecto</a>
+                                    <a href=el projecto.php class="nav-link">El proyecto</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="el%20equipo.php" class="nav-link">El equipo</a>
