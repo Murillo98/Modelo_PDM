@@ -1,17 +1,4 @@
-<?php
-$servername = "remotemysql.com";
-$username = "bsBlqdISRU";
-$password = "GDPpUdpf5I";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-?>
+<?php require_once('Connections/pdm.php'); ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -45,7 +32,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 mysql_select_db($database_pdm, $pdm);
-$query_Recordset1 = "SELECT * FROM Doctor";
+$query_Recordset1 = "SELECT * FROM doctor";
 $Recordset1 = mysql_query($query_Recordset1, $pdm) or die(mysql_error());
 $row_Recordset1 = mysql_fetch_assoc($Recordset1);
 $totalRows_Recordset1 = mysql_num_rows($Recordset1);
@@ -167,7 +154,7 @@ http://www.templatemo.com/tm-488-classic
                 <div class="row tm-2-rows-sm-swap">
                   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 tm-2-rows-sm-down-1"><!-- InstanceBeginEditable name="Contenido" -->
                   <h3 class="tm-gold-text" align="center">Inicio de Sesión</h3>
-                  <form name="form1" method="post" action="<?php echo $loginFormAction; ?>">
+                  <form name="form1" method="POST" action="<?php echo $loginFormAction; ?>">
                     <table width="200" border="1" align="center">
                       <tr>
                         <th scope="row">Usuario:</th>
@@ -181,9 +168,10 @@ http://www.templatemo.com/tm-488-classic
                       </tr>
                     </table>
                     <p>
-                      <input type="submit" name="ingresar" id="ingresar" value="Ingresar">
+                      <input type="submit" name="ingresar" id="ingresar" value="Ingresar" align="bottom">
                       
                     </p>
+                    <p><a href="Registro.php">Registro</a></p>
                   </form>
                   <p>&nbsp;</p>
                   <p>&nbsp;</p>
