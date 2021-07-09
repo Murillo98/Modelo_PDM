@@ -113,7 +113,8 @@ while($row=mysqli_fetch_assoc($resultado)){						?>
                         </tr>
             <?php }?>          </table>
                       <p>&nbsp;</p>
-                      <p>&nbsp;</p>
+                      <form name="form1" method="post" action="">
+                      
                       <?php
 $servername = "remotemysql.com";
 $username = "ygEbfhzsHJ";
@@ -121,7 +122,7 @@ $password = "BxwlgwCvXX";
 $dbname = "ygEbfhzsHJ";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
@@ -140,7 +141,11 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
-                      <p>&nbsp; </p>
+                      
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                      </form>
+                      <p>&nbsp;</p><p>&nbsp; </p>
                       <p>&nbsp;</p>
                     <!-- InstanceEndEditable --></div>
                 </div>
