@@ -1,85 +1,3 @@
-<?php require_once('Connections/pdm.php'); ?>
-<?php
-if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
-{
-  if (PHP_VERSION < 6) {
-    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
-  }
-
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
-
-  switch ($theType) {
-    case "text":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
-    case "long":
-    case "int":
-      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-      break;
-    case "double":
-      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
-      break;
-    case "date":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;
-    case "defined":
-      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-      break;
-  }
-  return $theValue;
-}
-}
-
-mysql_select_db($database_pdm, $pdm);
-$query_Recordset1 = "SELECT * FROM Doctor";
-$Recordset1 = mysql_query($query_Recordset1, $pdm) or die(mysql_error());
-$row_Recordset1 = mysql_fetch_assoc($Recordset1);
-$totalRows_Recordset1 = mysql_num_rows($Recordset1);
-?>
-<?php
-// *** Validate request to login to this site.
-if (!isset($_SESSION)) {
-  session_start();
-}
-
-$loginFormAction = $_SERVER['PHP_SELF'];
-if (isset($_GET['accesscheck'])) {
-  $_SESSION['PrevUrl'] = $_GET['accesscheck'];
-}
-
-if (isset($_POST['id'])) {
-  $loginUsername=$_POST['id'];
-  $password=$_POST['contrasena'];
-  $MM_fldUserAuthorization = "";
-  $MM_redirectLoginSuccess = "Bienvenido.php";
-  $MM_redirectLoginFailed = "ingresar sesion.php";
-  $MM_redirecttoReferrer = false;
-  mysql_select_db($database_pdm, $pdm);
-  
-  $LoginRS__query=sprintf("SELECT id_doctor, nombre FROM doctor WHERE id_doctor=%s AND nombre=%s",
-    GetSQLValueString($loginUsername, "int"), GetSQLValueString($password, "text")); 
-   
-  $LoginRS = mysql_query($LoginRS__query, $pdm) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginRS);
-  if ($loginFoundUser) {
-     $loginStrGroup = "";
-    
-	if (PHP_VERSION >= 5.1) {session_regenerate_id(true);} else {session_regenerate_id();}
-    //declare two session variables and assign them
-    $_SESSION['MM_Username'] = $loginUsername;
-    $_SESSION['MM_UserGroup'] = $loginStrGroup;	      
-
-    if (isset($_SESSION['PrevUrl']) && false) {
-      $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
-    }
-    header("Location: " . $MM_redirectLoginSuccess );
-  }
-  else {
-    header("Location: ". $MM_redirectLoginFailed );
-  }
-}
-?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/Plantilla.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -131,10 +49,10 @@ http://www.templatemo.com/tm-488-classic
                                     <a href="../el proyecto.php"../el projecto.php" class="nav-link">El proyecto</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="el%20equipo.php" class="nav-link">El equipo</a>
+                                    <a href="el equipo.php" class="nav-link">El equipo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="ingresar%20sesion.php" class="nav-link">Ingresar sesion</a>
+                                    <a href="ingresar sesion.php" class="nav-link">Ingresar sesion</a>
                                 </li>
                             </ul>                        
                         </div>
@@ -153,40 +71,8 @@ http://www.templatemo.com/tm-488-classic
             <div class="container-fluid">
                 <div class="row tm-2-rows-sm-swap">
                   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 tm-2-rows-sm-down-1"><!-- InstanceBeginEditable name="Contenido" -->
-                  <h3 class="tm-gold-text" align="center">Inicio de Sesión</h3>
-                  <form name="form1" method="post" action="<?php echo $loginFormAction; ?>">
-                    <table width="200" border="1" align="center">
-                      <tr>
-                        <th scope="row">Usuario:</th>
-                        <td><label for="id"></label>
-                        <input type="text" name="id" id="id"></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Constraseña:</th>
-                        <td><label for="contrasena"></label>
-                        <input type="text" name="contrasena" id="contrasena"></td>
-                      </tr>
-                    </table>
-                    <p>
-                      <input type="submit" name="ingresar" id="ingresar" value="Ingresar">
-                      <?php
-$servername = "remotemysql.com";
-$username = "bsBlqdISRU";
-$password = "GDPpUdpf5I";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-?>
-                    </p>
-                  </form>
-                  <p>&nbsp;</p>
-                  <p>&nbsp;</p>
+                  <h3 class="tm-gold-text">Bienvenido</h3>
+                      <p>Personas asignadas:</p>
                       <p>&nbsp;</p>
                     <!-- InstanceEndEditable --></div>
                 </div>
@@ -277,6 +163,3 @@ echo "Connected successfully";
        
 </body>
 <!-- InstanceEnd --></html>
-<?php
-mysql_free_result($Recordset1);
-?>

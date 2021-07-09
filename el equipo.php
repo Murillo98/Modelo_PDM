@@ -142,7 +142,7 @@ http://www.templatemo.com/tm-488-classic
 
                         <div class="tm-footer-content-box">
                         
-                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Fusce non turpis</h3>
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Imaágenes Referenciales</h3>
                             <div class="tm-margin-b-30"><img src="img/tm-img-100x100-2.jpg" alt="Image" class="tm-footer-thumbnail">
                             <img src="img/tm-img-100x100-3.jpg" alt="Image" class="tm-footer-thumbnail"></div>
                             <p class="tm-margin-b-20">&nbsp;</p>
@@ -155,7 +155,7 @@ http://www.templatemo.com/tm-488-classic
 
                 <div class="row">
                     <div class="col-xs-12 tm-copyright-col">
-                        <p class="tm-copyright-text">Copyright 2021 Your Company Name</p>
+                        <p class="tm-copyright-text">Copyright 2021 Grupo 1 SAC</p>
                     </div>
                 </div>
             </div>
