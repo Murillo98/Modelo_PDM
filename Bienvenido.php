@@ -103,7 +103,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id_doctor, nombre_doctor FROM 'Doctor'";
+$sql = "SELECT id_doctor, nombre_doctor FROM doctor";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
