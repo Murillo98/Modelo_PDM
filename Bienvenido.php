@@ -91,30 +91,6 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 ?>
                       <p>Personas asignadas:</p>
-                    
-                      <table width="200" border="1">
-                        <tr>
-                          <th scope="col">Nombre</th>
-                          <th scope="col">Apellido</th>
-                          <th scope="col">Edad</th>
-                          <th scope="col">Telefono</th>
-                          <th scope="col">Especialidad</th>
-                          <th scope="col">Paciente</th>
-                        </tr>
-                        <?php $resultado = mysqli_query($conn,$doctor);
-while($row=mysqli_fetch_assoc($resultado)){						?>
-                        <tr>
-                          <td><?php echo $row["nombre"];?>&nbsp;</td>
-                          <td><?php echo $row["apellido"];?>&nbsp;</td>
-                          <td><?php echo $row["edad"];?>&nbsp;</td>
-                          <td><?php echo $row["teléfono"];?>&nbsp;</td>
-                          <td><?php echo $row["especialidad"];?>&nbsp;</td>
-                          <td><?php echo $row["id_Paciente"];?>&nbsp;</td>
-                        </tr>
-            <?php }?>          </table>
-                      <p>&nbsp;</p>
-                      <form name="form1" method="post" action="">
-                      
                       <?php
 $servername = "remotemysql.com";
 $username = "ygEbfhzsHJ";
@@ -141,6 +117,31 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
+                    
+                      <table width="200" border="1">
+                        <tr>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellido</th>
+                          <th scope="col">Edad</th>
+                          <th scope="col">Telefono</th>
+                          <th scope="col">Especialidad</th>
+                          <th scope="col">Paciente</th>
+                        </tr>
+                        <?php $resultado = mysqli_query($conn,$doctor);
+while($row=mysqli_fetch_assoc($resultado)){						?>
+                        <tr>
+                          <td><?php echo $row["nombre"];?>&nbsp;</td>
+                          <td><?php echo $row["apellido"];?>&nbsp;</td>
+                          <td><?php echo $row["edad"];?>&nbsp;</td>
+                          <td><?php echo $row["teléfono"];?>&nbsp;</td>
+                          <td><?php echo $row["especialidad"];?>&nbsp;</td>
+                          <td><?php echo $row["id_Paciente"];?>&nbsp;</td>
+                        </tr>
+            <?php }?>          </table>
+                      <p>&nbsp;</p>
+                      <form name="form1" method="post" action="">
+                      
+                      
                       
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
