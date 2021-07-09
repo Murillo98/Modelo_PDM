@@ -148,6 +148,49 @@ $result = mysqli_query($conne, $sql);
                     </tr>
                     <?php } ?>
                   </table>
+                  <p>&nbsp;</p>
+                  <table width="200" border="1" align="center">
+                    <tr>
+                      <th scope="col">Nombre del paciente</th>
+                      <th scope="col">Nombre del doctor</th>
+                      <th scope="col">Nombre del concentrador</th>
+                      <th scope="col">Flujo de oxigeno entregado</th>
+                      <th scope="col">Pureza de oxigeno</th>
+                      <th scope="col">Saturación del Paciente</th>
+                      <th scope="col">Temperatura del paciente</th>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Hora</th>
+                    </tr>
+                    <?php $servername = "remotemysql.com";
+$username = "bsBlqdISRU";
+$password = "GDPpUdpf5I";
+$dbname = "bsBlqdISRU";
+
+// Create connection
+$connet = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$connet) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT idpaciente.nombre_paciente, doctor.nombre_doctor, signospaciente.nombre_concentrador, signospaciente.flujo_oxigeno, signospaciente.pureza_oxigeno, signospaciente.saturacion, signospaciente.temperatura, signospaciente.fecha, signospaciente.hora FROM idpaciente, doctor, signospaciente WHERE idpaciente.id_doctor = doctor.id_doctor";
+$result = mysqli_query($connet, $sql);
+					while($row=mysqli_fetch_assoc($result)) {
+					?>
+                    <tr>
+                      <td><?php echo $row["idpaciente.nombre_paciente"];?>&nbsp;</td>
+                      <td><?php echo $row["doctor.nombre_doctor"];?>&nbsp;</td>
+                      <td><?php echo $row["signospaciente.nombre_concentrador"];?>&nbsp;</td>
+                      <td><?php echo $row["signospaciente.flujo_oxigeno"];?>&nbsp;</td>
+                      <td><?php echo $row["signospaciente.pureza_oxigeno"];?>&nbsp;</td>
+                      <td><?php echo $row["signospaciente.saturacion"];?>&nbsp;</td>
+                      <td><?php echo $row["signospaciente.temperatura"];?>&nbsp;</td>
+                      <td><?php echo $row["signospaciente.fecha"];?>&nbsp;</td>
+                      <td><?php echo $row["signospaciente.hora"];?>&nbsp;</td>
+                    </tr>
+                    <?php } ?>
+                  </table>
+                  <p>&nbsp; </p>
                   <p>&nbsp; </p>
                   <p>&nbsp;</p><p>&nbsp; </p>
                       <p>&nbsp;</p>
