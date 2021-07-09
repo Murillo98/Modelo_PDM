@@ -126,8 +126,21 @@ mysqli_close($conne);
                       <th scope="col">Id</th>
                       <th scope="col">Nombre</th>
                     </tr>
-                    <?php $resultado = mysqli_query($conexion,$doctor);
-					while($row=mysqli_fetch_assoc($resultado)) {
+                    <?php $servername = "remotemysql.com";
+$username = "bsBlqdISRU";
+$password = "GDPpUdpf5I";
+$dbname = "bsBlqdISRU";
+
+// Create connection
+$conne = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conne) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT id_doctor, nombre_doctor FROM doctor";
+$result = mysqli_query($conne, $sql);
+					while($row=mysqli_fetch_assoc($result)) {
 					?>
                     <tr>
                       <td><?php echo $row["id_doctor"];?>&nbsp;</td>
