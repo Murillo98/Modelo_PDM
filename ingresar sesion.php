@@ -91,6 +91,9 @@ http://www.templatemo.com/tm-488-classic
                       
                     </p>
                   </form>
+                  <form name="form2" method="post" action="bienvenida.php">
+                    <input type="submit" name="Doctores" id="Doctores" value="Ver Doctores">
+                  </form>
                   <p>&nbsp;</p>
                   <p>&nbsp;</p>
                       <p>&nbsp;</p>

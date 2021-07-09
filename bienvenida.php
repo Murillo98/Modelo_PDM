@@ -72,27 +72,37 @@ http://www.templatemo.com/tm-488-classic
                 <div class="row tm-2-rows-sm-swap">
                   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 tm-2-rows-sm-down-1"><!-- InstanceBeginEditable name="Contenido" -->
                   <h3 class="tm-gold-text">Bienvenido</h3>
-                      <p>Personas asignadas:</p>
-                      <table width="200" border="1">
+                      <p>Médicos disponibles:</p>
+                      <table width="200" border="1" align="center">
                         <tr>
-                          <th scope="col">Nombre</th>
-                          <th scope="col">Apellido</th>
-                          <th scope="col">Edad</th>
-                          <th scope="col">Telefono</th>
+                          <th scope="col">Nombre del Doctor</th>
+                          <th scope="col">Apellio del Doctor</th>
                           <th scope="col">Especialidad</th>
-                          <th scope="col">id_paciente</th>
                         </tr>
-                        <?php $resultado = mysqli_query($conexion,$doctor); 
-						while($row=mysqli_fetch_assoc($resultado))?>
+                        <?php $servername = "remotemysql.com";
+$username = "bsBlqdISRU";
+$password = "GDPpUdpf5I";
+$dbname = "bsBlqdISRU";
+
+// Create connection
+$conne = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conne) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT nombre_doctor, apellido_doctor, especialidad_doctor FROM doctor";
+$result = mysqli_query($conne, $sql);
+					while($row=mysqli_fetch_assoc($result)) {
+					?>
                         <tr>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
+                          <td><?php echo $row["nombre_doctor"];?>&nbsp;</td>
+                          <td><?php echo $row["apellido_doctor"];?>&nbsp;</td>
+                          <td><?php echo $row["especialidad_doctor"];?>&nbsp;</td>
                         </tr>
+                        <?php } ?>
                       </table>
+                      <p>&nbsp;</p>
                       <p>&nbsp;</p>
                       <p>&nbsp;</p>
                     <!-- InstanceEndEditable --></div>
