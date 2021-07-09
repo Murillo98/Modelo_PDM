@@ -91,31 +91,33 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 ?>
                       <p>Personas asignadas:</p>
-                      <?php
+                      
+<?php
 $servername = "remotemysql.com";
 $username = "bsBlqdISRU";
 $password = "GDPpUdpf5I";
+$dbname = "bsBlqdISRU";
 
 // Create connection
-$conne = new mysqli($servername, $username, $password);
+$conne = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
-if ($conne->connect_error) {
-  die("Connection failed: " . $conne->connect_error);
+if (!$conne) {
+  die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
 
 $sql = "SELECT id_doctor, nombre_doctor FROM doctor";
-$result = $conne->query($sql);
+$result = mysqli_query($conne, $sql);
 
-if ($result->num_rows > 0) {
+if (mysqli_num_rows($result) > 0) {
   // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id_doctor"]. " - Especialidad: " . $row["nombre_doctor"]."<br>";
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "id: " . $row["id_doctor"]. " - Name: " . $row["nombre_doctor"]."<br>";
   }
 } else {
   echo "0 results";
 }
-$conn->close();
+
+mysqli_close($conne);
 ?>
                     
                      
