@@ -168,7 +168,7 @@ $result1 = mysqli_query($conne1, $sql1);
 if (mysqli_num_rows($result1) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result1)) {
-    echo "id: " . $row["idpaciente.nombre_paciente"]. " - Name: " . $row["doctor.nombre_doctor"]."<br>";
+    echo "id: " . $row["nombre_paciente"]. " - Name: " . $row["nombre_doctor"]."<br>";
   }
 } else {
   echo "0 results";
