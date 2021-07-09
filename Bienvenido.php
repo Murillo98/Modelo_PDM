@@ -1,6 +1,6 @@
 <!php
 	include("pdm.php");
-    $doctor = "SELECT * FROM Doctor";
+    $doctor = "SELECT * FROM doctor";
 ?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/Plantilla.dwt.php" codeOutsideHTMLIsLocked="false" -->
@@ -92,7 +92,8 @@ echo "Connected successfully";
 ?>
                       <p>Personas asignadas:</p>
                       
-<?php
+                  <p>
+                    <?php
 $servername = "remotemysql.com";
 $username = "bsBlqdISRU";
 $password = "GDPpUdpf5I";
@@ -119,9 +120,23 @@ if (mysqli_num_rows($result) > 0) {
 
 mysqli_close($conne);
 ?>
-                    
-                     
-                      <p>&nbsp;</p><p>&nbsp; </p>
+                  </p>
+                  <table width="200" border="1">
+                    <tr>
+                      <th scope="col">Id</th>
+                      <th scope="col">Nombre</th>
+                    </tr>
+                    <?php $resultado = mysqli_query($conexion,$doctor);
+					while($row=mysqli_fetch_assoc($resultado)) {
+					?>
+                    <tr>
+                      <td><?php echo $row["id_doctor"];?>&nbsp;</td>
+                      <td><?php echo $row["nombre_doctor"];?>&nbsp;</td>
+                    </tr>
+                    <?php } ?>
+                  </table>
+                  <p>&nbsp; </p>
+                  <p>&nbsp;</p><p>&nbsp; </p>
                       <p>&nbsp;</p>
                     <!-- InstanceEndEditable --></div>
                 </div>
