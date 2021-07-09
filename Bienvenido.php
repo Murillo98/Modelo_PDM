@@ -76,6 +76,20 @@ http://www.templatemo.com/tm-488-classic
                 <div class="row tm-2-rows-sm-swap">
                   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 tm-2-rows-sm-down-1"><!-- InstanceBeginEditable name="Contenido" -->
                   <h3 class="tm-gold-text">Bienvenido</h3>
+                  <?php
+$servername = "remotemysql.com";
+$username = "ygEbfhzsHJ";
+$password = "BxwlgwCvXX";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?>
                       <p>Personas asignadas:</p>
                     
                       <table width="200" border="1">
@@ -87,11 +101,11 @@ http://www.templatemo.com/tm-488-classic
                           <th scope="col">Especialidad</th>
                           <th scope="col">Paciente</th>
                         </tr>
-                        <?php $resultado = mysqli_query($conexion,$doctor);
+                        <?php $resultado = mysqli_query($conn,$doctor);
 while($row=mysqli_fetch_assoc($resultado)){						?>
                         <tr>
                           <td><?php echo $row["nombre"];?>&nbsp;</td>
-                          <td><?php echo $row["apeliido"];?>&nbsp;</td>
+                          <td><?php echo $row["apellido"];?>&nbsp;</td>
                           <td><?php echo $row["edad"];?>&nbsp;</td>
                           <td><?php echo $row["teléfono"];?>&nbsp;</td>
                           <td><?php echo $row["especialidad"];?>&nbsp;</td>
