@@ -149,6 +149,34 @@ $result = mysqli_query($conne, $sql);
                     <?php } ?>
                   </table>
                   <p>&nbsp;</p>
+                  <?php
+$servername = "remotemysql.com";
+$username = "bsBlqdISRU";
+$password = "GDPpUdpf5I";
+$dbname = "bsBlqdISRU";
+
+// Create connection
+$conne1 = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conne1) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql1 = "SELECT idpaciente.nombre_paciente, doctor.nombre_doctor, signospaciente.nombre_concentrador, signospaciente.flujo_oxigeno, signospaciente.pureza_oxigeno, signospaciente.saturacion, signospaciente.temperatura, signospaciente.fecha, signospaciente.hora FROM idpaciente, doctor, signospaciente WHERE idpaciente.id_doctor = doctor.id_doctor";
+$result1 = mysqli_query($conne1, $sql1);
+
+if (mysqli_num_rows($result1) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result1)) {
+    echo "id: " . $row["idpaciente.nombre_paciente"]. " - Name: " . $row["doctor.nombre_doctor"]."<br>";
+  }
+} else {
+  echo "0 results";
+}
+
+mysqli_close($conne1);
+?>
+                  <p>&nbsp;</p>
                   <table width="200" border="1" align="center">
                     <tr>
                       <th scope="col">Nombre del paciente</th>
