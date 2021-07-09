@@ -1,4 +1,17 @@
-<?php require_once('Connections/pdm.php'); ?>
+<?php
+$servername = "remotemysql.com";
+$username = "bsBlqdISRU";
+$password = "GDPpUdpf5I";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?>
 <?php
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -169,20 +182,7 @@ http://www.templatemo.com/tm-488-classic
                     </table>
                     <p>
                       <input type="submit" name="ingresar" id="ingresar" value="Ingresar">
-                      <?php
-$servername = "remotemysql.com";
-$username = "bsBlqdISRU";
-$password = "GDPpUdpf5I";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-?>
+                      
                     </p>
                   </form>
                   <p>&nbsp;</p>
