@@ -93,8 +93,8 @@ echo "Connected successfully";
                       <p>Personas asignadas:</p>
                       <?php
 $servername = "remotemysql.com";
-$username = "ygEbfhzsHJ";
-$password = "BxwlgwCvXX";
+$username = "bsBlqdISRU";
+$password = "GDPpUdpf5I";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -103,13 +103,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT code_doctor, especialidad FROM 'Doctor'";
+$sql = "SELECT id_doctor, nombre_doctor FROM 'Doctor'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["code_doctor"]. " - Especialidad: " . $row["especialidad"]."<br>";
+    echo "id: " . $row["id_doctor"]. " - Especialidad: " . $row["nombre_doctor"]."<br>";
   }
 } else {
   echo "0 results";
