@@ -113,6 +113,33 @@ while($row=mysqli_fetch_assoc($resultado)){						?>
                         </tr>
             <?php }?>          </table>
                       <p>&nbsp;</p>
+                      <p>&nbsp;</p>
+                      <?php
+$servername = "remotemysql.com";
+$username = "ygEbfhzsHJ";
+$password = "BxwlgwCvXX";
+$dbname = "ygEbfhzsHJ";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id_doctor, nombre, apellido FROM Doctor";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id_doctor"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>
                       <p>&nbsp; </p>
                       <p>&nbsp;</p>
                     <!-- InstanceEndEditable --></div>
