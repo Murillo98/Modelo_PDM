@@ -97,14 +97,15 @@ $username = "bsBlqdISRU";
 $password = "GDPpUdpf5I";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conne = new mysqli($servername, $username, $password);
 // Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if ($conne->connect_error) {
+  die("Connection failed: " . $conne->connect_error);
 }
+echo "Connected successfully";
 
 $sql = "SELECT id_doctor, nombre_doctor FROM doctor";
-$result = $conn->query($sql);
+$result = $conne->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
@@ -117,34 +118,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
                     
-                      <table width="200" border="1">
-                        <tr>
-                          <th scope="col">Nombre</th>
-                          <th scope="col">Apellido</th>
-                          <th scope="col">Edad</th>
-                          <th scope="col">Telefono</th>
-                          <th scope="col">Especialidad</th>
-                          <th scope="col">Paciente</th>
-                        </tr>
-                        <?php $resultado = mysqli_query($conn,$doctor);
-while($row=mysqli_fetch_assoc($resultado)){						?>
-                        <tr>
-                          <td><?php echo $row["nombre"];?>&nbsp;</td>
-                          <td><?php echo $row["apellido"];?>&nbsp;</td>
-                          <td><?php echo $row["edad"];?>&nbsp;</td>
-                          <td><?php echo $row["teléfono"];?>&nbsp;</td>
-                          <td><?php echo $row["especialidad"];?>&nbsp;</td>
-                          <td><?php echo $row["id_Paciente"];?>&nbsp;</td>
-                        </tr>
-            <?php }?>          </table>
-                      <p>&nbsp;</p>
-                      <form name="form1" method="post" action="">
-                      
-                      
-                      
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                      </form>
+                     
                       <p>&nbsp;</p><p>&nbsp; </p>
                       <p>&nbsp;</p>
                     <!-- InstanceEndEditable --></div>
