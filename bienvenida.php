@@ -1,7 +1,3 @@
-<!php
-	include("pdm.php");
-    $doctor = "SELECT * FROM Doctor";
-?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/Plantilla.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -77,7 +73,6 @@ http://www.templatemo.com/tm-488-classic
                   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 tm-2-rows-sm-down-1"><!-- InstanceBeginEditable name="Contenido" -->
                   <h3 class="tm-gold-text">Bienvenido</h3>
                       <p>Personas asignadas:</p>
-                    
                       <table width="200" border="1">
                         <tr>
                           <th scope="col">Nombre</th>
@@ -85,21 +80,20 @@ http://www.templatemo.com/tm-488-classic
                           <th scope="col">Edad</th>
                           <th scope="col">Telefono</th>
                           <th scope="col">Especialidad</th>
-                          <th scope="col">Paciente</th>
+                          <th scope="col">id_paciente</th>
                         </tr>
-                        <?php $resultado = mysqli_query($conexion,$doctor);
-while($row=mysqli_fetch_assoc($resultado)){						?>
+                        <?php $resultado = mysqli_query($conexion,$doctor); 
+						while($row=mysqli_fetch_assoc($resultado))?>
                         <tr>
-                          <td><?php echo $row["nombre"];?>&nbsp;</td>
-                          <td><?php echo $row["apeliido"];?>&nbsp;</td>
-                          <td><?php echo $row["edad"];?>&nbsp;</td>
-                          <td><?php echo $row["teléfono"];?>&nbsp;</td>
-                          <td><?php echo $row["especialidad"];?>&nbsp;</td>
-                          <td><?php echo $row["id_Paciente"];?>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
                         </tr>
-            <?php }?>          </table>
+                      </table>
                       <p>&nbsp;</p>
-                      <p>&nbsp; </p>
                       <p>&nbsp;</p>
                     <!-- InstanceEndEditable --></div>
                 </div>
