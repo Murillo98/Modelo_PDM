@@ -174,8 +174,8 @@ if (!$connet) {
 }
 
 $sql = "SELECT idpaciente.nombre_paciente, doctor.nombre_doctor, signospaciente.nombre_concentrador, signospaciente.flujo_oxigeno, signospaciente.pureza_oxigeno, signospaciente.saturacion, signospaciente.temperatura, signospaciente.fecha, signospaciente.hora FROM idpaciente, doctor, signospaciente WHERE idpaciente.id_doctor = doctor.id_doctor";
-$result = mysqli_query($connet, $sql);
-					while($row=mysqli_fetch_assoc($result)) {
+$results = mysqli_query($connet, $sql);
+					while($row=mysqli_fetch_assoc($results)) {
 					?>
                     <tr>
                       <td><?php echo $row["idpaciente.nombre_paciente"];?>&nbsp;</td>
