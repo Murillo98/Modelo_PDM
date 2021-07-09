@@ -91,65 +91,6 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 ?>
                       <p>Personas asignadas:</p>
-                      
-                  <p>
-                    <?php
-$servername = "remotemysql.com";
-$username = "bsBlqdISRU";
-$password = "GDPpUdpf5I";
-$dbname = "bsBlqdISRU";
-
-// Create connection
-$conne = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conne) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
-$sql = "SELECT id_doctor, nombre_doctor FROM doctor";
-$result = mysqli_query($conne, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-  // output data of each row
-  while($row = mysqli_fetch_assoc($result)) {
-    echo "id: " . $row["id_doctor"]. " - Name: " . $row["nombre_doctor"]."<br>";
-  }
-} else {
-  echo "0 results";
-}
-
-mysqli_close($conne);
-?>
-                  </p>
-                  <table width="200" border="1">
-                    <tr>
-                      <th scope="col">Id</th>
-                      <th scope="col">Nombre</th>
-                    </tr>
-                    <?php $servername = "remotemysql.com";
-$username = "bsBlqdISRU";
-$password = "GDPpUdpf5I";
-$dbname = "bsBlqdISRU";
-
-// Create connection
-$conne = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conne) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
-$sql = "SELECT id_doctor, nombre_doctor FROM doctor";
-$result = mysqli_query($conne, $sql);
-					while($row=mysqli_fetch_assoc($result)) {
-					?>
-                    <tr>
-                      <td><?php echo $row["id_doctor"];?>&nbsp;</td>
-                      <td><?php echo $row["nombre_doctor"];?>&nbsp;</td>
-                    </tr>
-                    <?php } ?>
-                  </table>
-                  <p>&nbsp;</p>
-                  
                   <p>&nbsp;</p>
                   <table width="200" border="1" align="center">
                     <tr>
