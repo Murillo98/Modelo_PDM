@@ -103,13 +103,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id_doctor, nombre, apellido FROM Doctor";
+$sql = "SELECT id_doctor, especialidad FROM Doctor";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id_doctor"]. " - Name: " . $row["nombre"]. " " . $row["apellido"]. "<br>";
+    echo "id: " . $row["id_doctor"]. " - Especialidad: " . $row["especialidad"]."<br>";
   }
 } else {
   echo "0 results";
